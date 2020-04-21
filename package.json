@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build:single-spa:employee-details": "ng build employee-details --prod --deploy-url http://localhost:4200/",
-    "serve:single-spa:employee-details": "ng s --project employee-details --disable-host-check --port 4200 --deploy-url http://localhost:4200/ --live-reload false"
+    "serve:single-spa:employee-details": "ng s --project employee-details --disable-host-check --port 4200 --deploy-url http://localhost:4200/ --live-reload true"
   },
   "private": true,
   "dependencies": {

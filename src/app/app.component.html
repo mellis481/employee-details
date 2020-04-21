@@ -1,7 +1,27 @@
-<p>
-  <em>@mf-demo/employee-details using Angular</em>
-</p>
+<div *ngIf="employee">
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{ employee.name }}</h5>
+      <div class="card-text">
+        <strong>Username: </strong>{{ employee.username }}
+      </div>
+      <div class="card-text"><strong>Phone: </strong>{{ employee.phone }}</div>
+      <div class="card-text">
+        <strong>Website: </strong>{{ employee.website }}
+      </div>
+      <div class="card-text">
+        <strong>Email: </strong
+        ><a href="mailto:mellis@anexinet.com">{{ employee.email }}</a>
+      </div>
+    </div>
+  </div>
+  <a routerLink="/employees" class="mt-3">Back to Employees Index</a>
 
-<a routerLink="/employees">Back to Employees Index</a>
+  <p class="mt-3">
+    <em>@mf-demo/employee-details using Angular</em>
+  </p>
+</div>
 
-<router-outlet></router-outlet>
+<div class="spinner-border" role="status" *ngIf="!employee">
+  <span class="sr-only">Loading...</span>
+</div>
