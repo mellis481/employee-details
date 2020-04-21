@@ -1,3 +1,3 @@
 # Employee Details microfrontend app
 
-Run `npm start -- --http --port 9003`.
+Run `npm run serve:single-spa:employee-details`.
