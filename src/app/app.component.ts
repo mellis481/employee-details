@@ -8,11 +8,10 @@ import {
 
 export interface Employee {
   id: number;
-  name: string;
-  username: string;
+  first_name: string;
+  last_name: string;
   email: string;
-  phone: string;
-  website: string;
+  avatar: string;
 }
 
 @Component({
@@ -36,11 +35,9 @@ export class AppComponent implements OnInit, OnDestroy {
     const id = window.location.pathname.substr(
       window.location.pathname.lastIndexOf('/') + 1
     );
-    fetch(`https://jsonplaceholder.typicode.com/users/${id}`).then(
-      (response) => {
-        response.json().then((data) => (this.employee = data));
-      }
-    );
+    fetch(`https://reqres.in/api/users/${id}`).then((response) => {
+      response.json().then((data) => (this.employee = data.data));
+    });
   }
 
   ngOnDestroy() {
